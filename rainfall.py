@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import f1_score, accuracy_score
 
 # Load the dataset
-df = pd.read_csv("Downloads/rainfall_prediction_dataset.csv")
+df = pd.read_csv("rainfall_prediction_dataset.csv")
 
 # Assuming 'rainfall' column contains the labels for rainfall prediction (0 or 1)
 X = df.drop(columns=['rainfall'])  # Features
@@ -31,7 +31,7 @@ lr = LogisticRegression(
 lr.fit(X_train_scaled, y_train)
 
 # Streamlit App
-logo_path = r"Downloads/rain_logo.png" 
+logo_path = r"rain_logo.png" 
 st.image(logo_path, use_column_width='auto')
 
 # Streamlit app title
